@@ -1,4 +1,4 @@
-package com.loftblog.moneytracker;
+package com.my.moneytracker;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
