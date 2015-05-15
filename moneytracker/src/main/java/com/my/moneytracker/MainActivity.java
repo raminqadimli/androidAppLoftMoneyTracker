@@ -48,11 +48,11 @@ public class MainActivity extends ActionBarActivity {
         super.setTitle(title);
     }
 
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        drawerToggle.syncState();
-    }
+//    @Override
+//    protected void onPostCreate(Bundle savedInstanceState) {
+//        super.onPostCreate(savedInstanceState);
+//        drawerToggle.syncState();
+//    }
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
