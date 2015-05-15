@@ -10,36 +10,66 @@ package com.my.moneytracker;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
+import android.widget.Toast;
+
+import com.melnykov.fab.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TransactionsFragment extends Fragment {
-    private ListView listView;
+    private RecyclerView recyclerView;
     private TransactionAdapter transactionAdapter;
-    List<Transactions> data = new ArrayList<>();
+    List<Transaction> data = new ArrayList<>();
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View inflate = inflater.inflate(R.layout.fragment_transactions, container);
-        List<Transactions> adapterData = getDataList();
-        transactionAdapter = new TransactionAdapter(getActivity(), adapterData);
+        final View inflate = inflater.inflate(R.layout.fragment_transactions, container, false);
+        List<Transaction> adapterData = getDataList();
+        transactionAdapter = new TransactionAdapter(adapterData);
 
-        listView = (ListView) inflate.findViewById(R.id.listview);
-        listView.setAdapter(transactionAdapter);
+        recyclerView = (RecyclerView) inflate.findViewById(R.id.transactions_list);
+        FloatingActionButton fab = (FloatingActionButton) inflate.findViewById(R.id.fab);
+
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+
+        recyclerView.setAdapter(transactionAdapter);
+        fab.attachToRecyclerView(recyclerView);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(getActivity(), "Hello", Toast.LENGTH_SHORT).show();
+            }
+        });
         return inflate;
     }
 
-    private List<Transactions> getDataList() {
+    private List<Transaction> getDataList() {
 
-        data.add(new Transactions("Telephone", "2000"));
-        data.add(new Transactions("T-Shirts", "3000"));
-        data.add(new Transactions("Jeans", "1000"));
+        data.add(new Transaction("Telephone", "2000"));
+        data.add(new Transaction("T-Shirts", "3000"));
+        data.add(new Transaction("Jeans", "1000"));
+        data.add(new Transaction("Telephone", "2000"));
+        data.add(new Transaction("T-Shirts", "3000"));
+        data.add(new Transaction("Jeans", "1000"));
+        data.add(new Transaction("Telephone", "2000"));
+        data.add(new Transaction("T-Shirts", "3000"));
+        data.add(new Transaction("Jeans", "1000"));
+        data.add(new Transaction("Telephone", "2000"));
+        data.add(new Transaction("T-Shirts", "3000"));
+        data.add(new Transaction("Jeans", "1000"));
 
         return data;
     }
