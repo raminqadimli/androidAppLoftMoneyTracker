@@ -1,6 +1,8 @@
 <resources>
-    <array name="screen_aray">
-
+    <array name="navigation_data">
+        <item>Траты</item>
+        <item>Категории</item>
+        <item>Статистика</item>
     </array>
     <string name="app_name">moneytracker</string>
 
