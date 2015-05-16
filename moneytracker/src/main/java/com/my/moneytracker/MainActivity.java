@@ -10,22 +10,27 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
 
+
+@EActivity(R.layout.activity_main)
 public class MainActivity extends ActionBarActivity {
 
-    private Toolbar toolbar;
-    private DrawerLayout drawerLayout;
-    private ListView leftDrawer;
+    @ViewById
+    Toolbar toolbar;
+
+    @ViewById
+    DrawerLayout drawerLayout;
+
+    @ViewById
+    ListView leftDrawer;
+
     private ActionBarDrawerToggle drawerToggle;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        leftDrawer = (ListView) findViewById(R.id.left_drawer);
-
+    @AfterViews
+    void ready() {
         String[] navigationData = getResources().getStringArray(R.array.navigation_data);
         ArrayAdapter<String> navigationDrawerAdapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, navigationData);
         leftDrawer.setAdapter(navigationDrawerAdapter);
@@ -38,8 +43,6 @@ public class MainActivity extends ActionBarActivity {
 
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
         drawerLayout.setDrawerListener(drawerToggle);
-
-
     }
 
     @Override
