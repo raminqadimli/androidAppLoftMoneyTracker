@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         Transaction transaction = transactions.get(position);
         holder.name.setText(transaction.title);
         holder.sum.setText(transaction.sum);
-
+        holder.currentTransaction = transaction;
     }
 
     @Override
@@ -44,11 +45,19 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
 
         protected TextView name;
         protected TextView sum;
+        public Transaction currentTransaction;
 
-        public CardViewHolder(View itemView) {
+        public CardViewHolder(final View itemView) {
             super(itemView);
             name = (TextView) itemView.findViewById(R.id.name);
             sum = (TextView) itemView.findViewById(R.id.sum);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(v.getContext(), currentTransaction.title, Toast.LENGTH_SHORT).show();
+                }
+            });
         }
     }
 }

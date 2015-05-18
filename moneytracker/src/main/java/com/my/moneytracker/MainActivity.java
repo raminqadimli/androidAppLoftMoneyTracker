@@ -37,6 +37,7 @@ public class MainActivity extends ActionBarActivity {
             setSupportActionBar(toolbar);
         }
 
+
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
         drawerLayout.setDrawerListener(drawerToggle);
 
