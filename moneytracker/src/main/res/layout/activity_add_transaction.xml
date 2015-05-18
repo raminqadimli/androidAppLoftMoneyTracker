@@ -20,9 +20,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
-        android:gravity="left|center"
-        android:text="Сумма"
-        android:textSize="20dp" />
+            android:gravity="left|center"
+            android:text="Сумма"
+            android:textSize="20dp" />
 
 
         <EditText
@@ -54,11 +54,12 @@
             android:textSize="20dp" />
 
         <EditText
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="fill"
-            android:hint="Выберите категорию" />
+            android:hint="Выберите категорию"
+            android:textColorHint="@color/green"
+            android:textSize="10dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -70,7 +71,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Сегодня" />
+            android:hint="Сегодня"
+            android:textColorHint="@color/green"
+            android:textSize="10dp" />
 
 
     </GridLayout>
