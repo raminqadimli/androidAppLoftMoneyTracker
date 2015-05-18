@@ -10,7 +10,9 @@
         android:layout_height="wrap_content"
         android:background="@color/background"
         android:columnCount="2"
+        android:paddingBottom="10dp"
         android:paddingLeft="20dp"
+        android:paddingTop="10dp"
         android:rowCount="4">
 
 
@@ -18,11 +20,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
-            android:gravity="left|center"
-            android:text="Сумма" />
+        android:gravity="left|center"
+        android:text="Сумма"
+        android:textSize="20dp" />
 
 
         <EditText
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="fill"
@@ -32,7 +36,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Примечание" />
+            android:text="Примечание"
+            android:textSize="20dp" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -45,9 +50,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Категория" />
+            android:text="Категория"
+            android:textSize="20dp" />
 
         <EditText
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="fill"
@@ -57,7 +64,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Дата" />
+            android:text="Дата"
+            android:textSize="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
