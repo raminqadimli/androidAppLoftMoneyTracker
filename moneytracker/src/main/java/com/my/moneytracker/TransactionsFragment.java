@@ -49,9 +49,8 @@ public class TransactionsFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(getActivity(), AddTransactionActivity.class);
-                //myIntent.putExtra("key", data.get(0).toString()); //Optional parameters
-                getActivity().startActivity(myIntent);
+                Intent intent = new Intent(getActivity(), AddTransactionActivity.class);
+                getActivity().startActivity(intent);
             }
         });
         return inflate;
