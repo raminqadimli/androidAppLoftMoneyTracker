@@ -25,23 +25,18 @@ public class MainActivity extends ActionBarActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         left_drawer = (ListView) findViewById(R.id.left_drawer);
-
 //        String[] navigationData = getResources().getStringArray(R.array.screen_aray);
         String[] navigationData = new String[]{"Траты", "Категории", "Статистика"};
         ArrayAdapter<String> navigationDrawerAdapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, navigationData);
         left_drawer.setAdapter(navigationDrawerAdapter);
         left_drawer.setOnItemClickListener(new DrawerItemClickListener());
 
-
         if (toolbar != null) {
             setSupportActionBar(toolbar);
         }
 
-
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
         drawerLayout.setDrawerListener(drawerToggle);
-
-
     }
 
     @Override
