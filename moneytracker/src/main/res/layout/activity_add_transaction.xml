@@ -10,9 +10,9 @@
         android:layout_height="wrap_content"
         android:background="@color/background"
         android:columnCount="2"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
+        android:paddingBottom="@dimen/small_padding"
+        android:paddingLeft="@dimen/medium_padding"
+        android:paddingTop="@dimen/small_padding"
         android:rowCount="4">
 
 
@@ -22,7 +22,7 @@
             android:layout_gravity="fill"
             android:gravity="left|center"
             android:text="Сумма"
-            android:textSize="20dp" />
+            android:textSize="@dimen/big_text_size" />
 
 
         <EditText
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Примечание"
-            android:textSize="20dp" />
+            android:textSize="@dimen/big_text_size" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Категория"
-            android:textSize="20dp" />
+            android:textSize="@dimen/big_text_size" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -59,21 +59,21 @@
             android:gravity="fill"
             android:hint="Выберите категорию"
             android:textColorHint="@color/green"
-            android:textSize="10dp" />
+            android:textSize="@dimen/medium_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Дата"
-            android:textSize="20dp" />
+            android:textSize="@dimen/big_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Сегодня"
             android:textColorHint="@color/green"
-            android:textSize="10dp" />
+            android:textSize="@dimen/medium_text_size" />
 
 
     </GridLayout>
