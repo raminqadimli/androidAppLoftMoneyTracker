@@ -21,10 +21,8 @@ public class MainActivity extends ActionBarActivity {
     @ViewById
     Toolbar toolbar;
 
-    <<<<<<
-    <HEAD
-            @ViewById
-                    DrawerLayout drawerLayout;
+    @ViewById
+    DrawerLayout drawerLayout;
 
     @ViewById
     ListView leftDrawer;
