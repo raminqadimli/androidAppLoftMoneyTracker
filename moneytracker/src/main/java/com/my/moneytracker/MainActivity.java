@@ -60,7 +60,7 @@ public class MainActivity extends ActionBarActivity {
                 leftDrawer.setItemChecked(position, true);
                 drawerLayout.closeDrawer(leftDrawer);
                 setTitle(getString(R.string.transactions));
-                getFragmentManager().beginTransaction().replace(R.id.content_frame, new TransactionsFragment()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.content_frame, TransactionsFragment_.builder().build()).commit();
             }
         }
     }

@@ -1,45 +1,43 @@
 package com.my.moneytracker;
 
-import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
+import android.widget.EditText;
+
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.OptionsItem;
+import org.androidannotations.annotations.ViewById;
 
 /**
  * Created by Andrew on 18.05.2015.
  */
+@EActivity(R.layout.activity_add_transaction)
 public class AddTransactionActivity extends ActionBarActivity {
 
+    @ViewById
     Toolbar toolbar;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_transaction);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+    @ViewById
+    EditText sum, title;
 
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-        }
-
+    @AfterViews
+    void ready() {
+        setSupportActionBar(toolbar);
         setTitle(getString(R.string.add_transactions));
+        //noinspection ConstantConditions
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
     }
 
-    @Override
-    public void setTitle(CharSequence title) {
-        super.setTitle(title);
+    @Click
+    void addTransaction() {
+        new Transaction(title.getText().toString(), sum.getText().toString()).save();
+        finish();
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+    @OptionsItem
+    void homeSelected() {
+        onBackPressed();
     }
 }
