@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/Container.DarkBackground"
-    android:paddingLeft="2dp">
+    style="@style/Container.DarkBackground">
 
     <include layout="@layout/toolbar" />
 
@@ -21,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:gravity="left|center"
-            android:text="Сумма"
+            android:text="@string/sum_text"
             android:textSize="@dimen/big_text_size" />
 
 
@@ -30,34 +29,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="fill"
-            android:hint="300" />
+            android:hint="@string/sum_hint" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Примечание"
+            android:text="@string/about_text"
             android:textSize="@dimen/big_text_size" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="fill"
-            android:hint="Война и мир" />
+            android:hint="@string/about_hint" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Категория"
+            android:text="@string/category_text"
             android:textSize="@dimen/big_text_size" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="fill"
-            android:hint="Выберите категорию"
+            android:hint="@string/category_hint"
             android:textColorHint="@color/green"
             android:textSize="@dimen/medium_text_size" />
 
@@ -65,13 +64,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Дата"
+            android:text="@string/title_date"
             android:textSize="@dimen/big_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Сегодня"
+            android:hint="@string/hint_date"
             android:textColorHint="@color/green"
             android:textSize="@dimen/medium_text_size" />
 
