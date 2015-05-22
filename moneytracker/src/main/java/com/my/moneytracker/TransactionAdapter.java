@@ -31,7 +31,6 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         Transaction transaction = transactions.get(position);
         holder.name.setText(transaction.title);
         holder.sum.setText(transaction.sum);
-
     }
 
     @Override
@@ -45,7 +44,7 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         protected TextView name;
         protected TextView sum;
 
-        public CardViewHolder(View itemView) {
+        public CardViewHolder(final View itemView) {
             super(itemView);
             name = (TextView) itemView.findViewById(R.id.name);
             sum = (TextView) itemView.findViewById(R.id.sum);

@@ -21,8 +21,10 @@ public class MainActivity extends ActionBarActivity {
     @ViewById
     Toolbar toolbar;
 
-    @ViewById
-    DrawerLayout drawerLayout;
+    <<<<<<
+    <HEAD
+            @ViewById
+                    DrawerLayout drawerLayout;
 
     @ViewById
     ListView leftDrawer;
@@ -36,9 +38,7 @@ public class MainActivity extends ActionBarActivity {
         leftDrawer.setAdapter(navigationDrawerAdapter);
         leftDrawer.setOnItemClickListener(new DrawerItemClickListener());
 
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-        }
+        setSupportActionBar(toolbar);
 
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
         drawerLayout.setDrawerListener(drawerToggle);

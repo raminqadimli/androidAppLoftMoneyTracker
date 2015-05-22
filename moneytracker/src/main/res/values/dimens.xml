@@ -4,4 +4,13 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="dividerHeight">0.4dp</dimen>
     <dimen name="drawer_list_width">150dp</dimen>
+    <dimen name="medium_padding">20dp</dimen>
+    <dimen name="small_padding">10dp</dimen>
+    <dimen name="big_text_size">20dp</dimen>
+    <dimen name="medium_text_size">10dp</dimen>
+    <dimen name="button_margin">16dp</dimen>
+    <dimen name="card_height">60dp</dimen>
+    <dimen name="small_card_margin">5dp</dimen>
+    <dimen name="medium_card_margin">7dp</dimen>
+    <dimen name="large_margin">10dp</dimen>
 </resources>
